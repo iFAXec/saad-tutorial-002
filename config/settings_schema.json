@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Fahim-Learning",
+    "theme_name": "Saad-tutorial-002",
+    "theme_version": "1.0.0",
+    "theme_author": "Fahim",
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://support.shopify.com/",
+  },
+  {
+    "name": "store settings",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "tutorial-logo",
+            "label": "image-logo"
+        }
+    ]
+
+  },
+]
