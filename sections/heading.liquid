@@ -1,0 +1,22 @@
+<h3>{{section.settings.text_id}}</h3>
+
+{% schema %}
+    {
+        "name": "Heading",
+        "tag": "section",
+        "settings": [
+            {
+             "type": "text",
+             "id": "text_id",
+             "label": "text_label",
+             "default": "Hello World"
+            }
+        ],
+
+    "presets": [
+    {
+        "name": "Heading"
+    }
+    ]
+}
+{% endschema %}
