@@ -1,4 +1,6 @@
-    <style>
+{{product.title}}
+
+<style>
         :root{
             --gap: 24px;
             --max-width: 1100px;
@@ -152,21 +154,14 @@
     <main class="product-page" role="main">
         <section class="gallery" aria-label="Product images">
             <div class="main-image" id="mainImage">
-                <img src="https://via.placeholder.com/800x800?text=Product+1" alt="Product image">
+                <img src="{{product.featured_image | img_url: '100'}}" alt="Product image">
             </div>
             <div class="thumbnails" id="thumbnails">
-                <div class="thumb active" data-src="https://via.placeholder.com/800x800?text=Product+1">
-                    <img src="https://via.placeholder.com/160x160?text=1" alt="Thumbnail 1">
-                </div>
-                <div class="thumb" data-src="https://via.placeholder.com/800x800?text=Product+2">
-                    <img src="https://via.placeholder.com/160x160?text=2" alt="Thumbnail 2">
-                </div>
-                <div class="thumb" data-src="https://via.placeholder.com/800x800?text=Product+3">
-                    <img src="https://via.placeholder.com/160x160?text=3" alt="Thumbnail 3">
-                </div>
-                <div class="thumb" data-src="https://via.placeholder.com/800x800?text=Product+4">
-                    <img src="https://via.placeholder.com/160x160?text=4" alt="Thumbnail 4">
-                </div>
+                {% for media in product.media %}
+                    <div class="thumb active" data-src="{{media.url | img_url: '400'}}">
+                        <img src="{{media.preview_image | img_url: '200'}}" alt="{{media.alt | default: 'Product image'}}">
+                    </div>
+                {% endfor %}
             </div>
         </section>
 
